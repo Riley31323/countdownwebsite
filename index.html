@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Countdowns of my choosing</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Prompt', sans-serif;
+                color: white;
+                background: #161a20;
+            }
+
+            section {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 500px;
+                padding: 100px 20vw;
+            }
+
+            .blue {
+                background: #2d578a;
+            }
+
+            .curve {
+                position: absolute;
+                height: 225px;
+                width: 100%;
+                bottom: 0;
+            }
+
+            .curve::before {
+                content: '';
+                display: block;
+                position: absolute;
+                border-radius: 100% 50%;
+                width: 55%;
+                height: 100%;
+            }
+
+            .curve::after {
+                content: '';
+                display: block;
+                position: absolute;
+                border-radius: 100% 50%;
+                width: 55%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <section>
+            <h1>Nice Curves</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum sequi tenetur rem similique commodi nam quas quisquam amet dignissimos. Ipsum, animi deleniti. Quisquam, laboriosam recusandae ratione eos repellat saepe.</p>
+            <div class="curve"></div>
+        </section>
+        <section class="blue">
+            <h1>Nice Curves</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum sequi tenetur rem similique commodi nam quas quisquam amet dignissimos. Ipsum, animi deleniti. Quisquam, laboriosam recusandae ratione eos repellat saepe.</p>
+        </section>
+
+
+    </body>
+</html>
