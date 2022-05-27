@@ -8,13 +8,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-
+        <script src="index.js"></script>
         <style>
+            h1 {
+                font-size: 100px;
+            }
             body {
                 margin: 0;
                 font-family: 'Prompt', sans-serif;
                 color: white;
                 background: #161a20;
+                overflow-x: hidden;
+                overflow-y: hidden;
             }
 
             section {
@@ -23,52 +28,47 @@
                 flex-direction: column;
                 align-items: center;
                 min-height: 500px;
-                padding: 100px 20vw;
+                padding: 200px 65%;
             }
 
-            .blue {
-                background: #2d578a;
-            }
-
-            .curve {
-                position: absolute;
-                height: 225px;
+            .spacer {
+                aspect-ratio: 960/540;
                 width: 100%;
-                bottom: 0;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
             }
 
-            .curve::before {
-                content: '';
-                display: block;
-                position: absolute;
-                border-radius: 100% 50%;
-                width: 55%;
-                height: 100%;
+            .GoButton {
+                padding: 42px 70px;
+                border-radius: 12px;
+                font-size: 24px;
+                background-color: #1c87c9;
+                border: none;
+                color: #eeeeee;
+                box-shadow: 0 0 10px #1c87c9;
+                cursor: pointer;
             }
 
-            .curve::after {
-                content: '';
-                display: block;
-                position: absolute;
-                border-radius: 100% 50%;
-                width: 55%;
-                height: 100%;
+            .layer1 {
+                background-image: url(./layered-waves-haikei.svg);
+                animation: slidewaves 2s ease-in;
             }
+
+
+            @keyframes slidewaves{from{left:-300px;opacity: 0;} to{left:0;opacity:1}}
         </style>
     </head>
     <body>
 
+        <div id="layer1" class="spacer layer1">
+            <section>
 
-        <section>
-            <h1>Nice Curves</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum sequi tenetur rem similique commodi nam quas quisquam amet dignissimos. Ipsum, animi deleniti. Quisquam, laboriosam recusandae ratione eos repellat saepe.</p>
-            <div class="curve"></div>
-        </section>
-        <section class="blue">
-            <h1>Nice Curves</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum sequi tenetur rem similique commodi nam quas quisquam amet dignissimos. Ipsum, animi deleniti. Quisquam, laboriosam recusandae ratione eos repellat saepe.</p>
-        </section>
-
-
+                <h1>Countdowns</h1>
+                <button class="GoButton" onclick="location.href='countdowns.html'">Go</button>
+                <div class="curve"></div>
+            </section>
+        </div>
+        
     </body>
 </html>
